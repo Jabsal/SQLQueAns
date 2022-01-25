@@ -10,7 +10,7 @@ https://platform.stratascratch.com/coding-question?id=2036
 -- Find percentiles by splitting total order into even buckets using NTILE(50) to get 2% buckets
 -- Isolate the 1st NTILE using an outer query
 
---NOTE: NTILE makes the first bucket bigger if you are diving into buckets when the total records is not evenly divisible by the ntile
+--NOTE: NTILE makes the first bucket bigger if you are dividing into buckets when the total records is not evenly divisible by the ntile you want
 
 SELECT restaurant_id, total_order
 FROM
