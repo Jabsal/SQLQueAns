@@ -25,4 +25,21 @@ FROM
 WHERE ntile=1
 ORDER BY 2 DESC
 
+-- optimize the solution/ clean code ?
+-- No idea on how to make it faster but it can be cleaner by making the sub query a CTE
+
+with btm_rev as (
+     (SELECT restaurant_id, 
+            sum(order_total) as total_order,
+            ntile(50) OVER (
+                        ORDER BY sum(order_total))
+    FROM doordash_delivery
+    WHERE customer_placed_order_datetime BETWEEN '2020-05-01' AND '2020-05-31'
+    GROUP BY restaurant_id)
+)
+
+SELECT restaurant_id, total_order
+FROM btm_rev
+WHERE ntile=1
+ORDER BY 2 DESC
 
