@@ -9,3 +9,12 @@ https://platform.stratascratch.com/coding/10319-monthly-percentage-difference
 
 -- Format the date to YYYY-MM
 -- Calculate month over month percentage change in revenue using lag
+    -- formula (this month's revenue - last month's revenue) / last month's revenue
+
+SELECT to_char(created_at::date, 'YYYY-MM') AS year_month,
+        round((sum(value) - lag(sum(value), 1) OVER (w)) /
+        lag(sum(value), 1) OVER (w) * 100, 2) as revenue_diff
+FROM    sf_transactions
+GROUP BY year_month
+WINDOW w as (ORDER BY  to_char(created_at::date, 'YYYY-MM')) --windows aliasing
+ORDER BY year_month ASC
