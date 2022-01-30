@@ -5,3 +5,4 @@ SQL Questions and Answers
 * Number_of_violations.sql - using Extract year from date
 * Marketing_Campaign_Success.sql - using dense_rank()
 * UsersByAvgSessionTime.sql - max(case when) and min(case when)
+* SalariesDifferences.sql - max(case when), abs, filter
