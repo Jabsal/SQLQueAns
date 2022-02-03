@@ -6,3 +6,5 @@ SQL Questions and Answers
 * Marketing_Campaign_Success.sql - using dense_rank()
 * UsersByAvgSessionTime.sql - max(case when) and min(case when)
 * SalariesDifferences.sql - max(case when), abs, filter
+* HighestCostOrder.sql - self join, limit
+* FindingUserPurchases.sql - self join, date diff 
