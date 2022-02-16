@@ -1,7 +1,9 @@
 # SQLQueAns
 SQL Questions and Answers
+* BestSellingItem.sql - extract, rank, window function, cte
 * CustomerDetails.sql
 * FindingUserPurchases.sql - self join, date diff 
+* Findworkerswithanevennumberforworkerid.sql - worker_id % 2
 * HighestCostOrder.sql - self join, limit
 * Lowest_Revenue_Generated_Restaurant.sql - using ntile
 * Marketing_Campaign_Success.sql - using dense_rank()
@@ -10,4 +12,5 @@ SQL Questions and Answers
 * OrderDetails.sql 
 * RevenueOverTime.sql - Window function, ROWS BETWEEN 2 PRECEEDING AND CURRENT ROW
 * SalariesDifferences.sql - max(case when), abs, filter
+* TotalCostOfOrders.sql
 * UsersByAvgSessionTime.sql - max(case when) and min(case when)
