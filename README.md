@@ -1,7 +1,9 @@
 # SQLQueAns
 SQL Questions and Answers
+* ArizonaCaliforniaHawaiiEmployees.sql - window function, row_number(), self join
 * BestSellingItem.sql - extract, rank, window function, cte
 * CustomerDetails.sql
+* EasyMedium.sql
 * FindingUserPurchases.sql - self join, date diff 
 * Findworkerswithanevennumberforworkerid.sql - worker_id % 2
 * HighestCostOrder.sql - self join, limit
