@@ -8,6 +8,7 @@ SQL Questions and Answers
 * Finding_User_Purchases.sql - self join, date diff 
 * Find_workers_withanevennumber_workerid.sql - worker_id % 2
 * Highest_CostOrder.sql - self join, limit
+* Highest_Salaried_Employees.sql - cte, window function
 * Lowest_Price_Orders.sql - window function
 * Lowest_Revenue_Generated_Restaurant.sql - using ntile
 * Marketing_Campaign_Success.sql - using dense_rank()
