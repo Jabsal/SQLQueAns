@@ -1,5 +1,6 @@
 # SQLQueAns
 SQL Questions and Answers
+* 5th_highest_salary.sql - window function
 * Arizona_California_Hawaii_Employees.sql - window function, row_number(), self join
 * Best_SellingItem.sql - extract, rank, window function, cte
 * CustomerDetails.sql

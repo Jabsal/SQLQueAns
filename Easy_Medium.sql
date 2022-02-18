@@ -106,3 +106,146 @@ SELECT department,
 FROM worker
 GROUP BY department
 HAVING COUNT(worker_id) < 5;
+
+
+-- https://platform.stratascratch.com/coding/9858-find-employees-in-the-hr-department-and-output-the-result-with-one-duplicate?python=
+-- Find employees in the HR department and output the result with one duplicate
+-- Find employees in the HR department and output the result with one duplicate.
+-- Output the first name and the department of employees.
+
+-- Approach
+-- - The HR department has 'HR' as the department column value.
+-- - Use UNION ALL to the same table to get duplicate records.
+
+-- Solution
+SELECT 
+    first_name, 
+    department
+FROM worker 
+WHERE 
+    department like 'HR' 
+UNION ALL
+SELECT 
+    first_name,
+    department
+FROM worker  
+WHERE 
+    department like 'HR';
+
+
+-- https://platform.stratascratch.com/coding/9857-find-the-second-highest-salary-without-using-order-by?python=
+-- Find the second highest salary without using ORDER BY
+-- Find the second highest salary without using ORDER BY.
+
+SELECT max(salary) 
+FROM worker
+WHERE 
+    salary NOT IN 
+        (SELECT 
+            max(salary) 
+         FROM worker)
+
+
+
+-- https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?python=
+-- Find employees with the same salary
+-- Find employees with the same salary.
+-- Output the worker id along with the first name and the salary.
+
+-- - Self join on salary and the worker id.
+-- - Use DISTINCT to find unique records.
+
+SELECT 
+    distinct 
+    W.worker_id, 
+    W.first_name, 
+    W.salary 
+FROM
+    -- self join 
+    worker W
+   INNER JOIN worker W1 
+ON 
+    W.salary = W1.salary 
+and
+    W.worker_id != W1.worker_id
+
+
+-- Find the duplicate records in the dataset
+-- Find the duplicate records in the dataset.
+-- Output the worker title, affected_from date, and the number of times the records were duplicated
+
+SELECT 
+    worker_title, 
+    affected_from, 
+    count(*) AS n_affected
+FROM title
+GROUP BY 
+    worker_title,
+    affected_from
+HAVING 
+    count(*) > 1
+
+
+-- Find all workers who are also managers
+-- Find all workers who are also managers.    
+-- Output the first name along with the corresponding title.
+
+SELECT 
+    distinct W.first_name, 
+    T.worker_title
+FROM 
+    worker W
+INNER JOIN 
+    title T
+ON 
+    W.worker_id = T.worker_ref_id AND 
+    T.worker_title IN ('Manager')
+
+
+-- Find all workers whose first name contains 6 letters and also ends with the letter 'h'
+-- Find all workers whose first name contains 6 letters and also ends with the letter 'h'.
+
+SELECT * 
+FROM worker 
+WHERE LENGTH(first_name) = 6 
+AND LOWER(first_name) LIKE '%h'
+
+
+-- Combine the first and last names of workers
+-- Combine the first and last names of workers with a space inbetween.
+
+SELECT CONCAT(first_name,' ',last_name) AS full_name 
+FROM worker;
+
+
+
+-- Replace the letter 'a' with 'A' in the first name
+
+SELECT
+    REPLACE(first_name, 'a' , 'A') 
+FROM worker
+
+
+-- Formatting Names
+-- Print the first name after removing white spaces from the left side.
+
+SELECT
+    LTRIM(first_name) 
+FROM worker
+
+
+--Positions Of Letter 'a'
+--Find the position of the letter 'a' in the first name of the worker 'Amitah'.
+
+SELECT
+    STRPOS(FIRST_NAME, 'a') AS position_of_letter_a
+FROM worker
+WHERE 
+  first_name = 'Amitah'
+
+
+--Print the first three characters of the first name.
+
+SELECT 
+    SUBSTRING(first_name, 1, 3) 
+FROM worker
