@@ -13,11 +13,13 @@ SQL Questions and Answers
 * Lowest_Price_Orders.sql - window function
 * Lowest_Revenue_Generated_Restaurant.sql - using ntile
 * Marketing_Campaign_Success.sql - using dense_rank()
+* Most_Expensive_Products_Per_Category.sql - window function, cast as float
 * Monthly_Percentage_Difference.sql - using lag and windows alias
 * Number_of_violations.sql - using Extract year from date
 * OrderDetails.sql 
 * Revenue_OverTime.sql - Window function, ROWS BETWEEN 2 PRECEEDING AND CURRENT ROW
 * Salaries_Differences.sql - max(case when), abs, filter
 * Second_Highest_Salary.sql - cte, dense_rank()
+* Top_Percentile_Fraud.sql - Window function using NTILE
 * Total_Cost_Orders.sql
 * Users_AvgSessionTime.sql - max(case when) and min(case when)
