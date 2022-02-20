@@ -3,6 +3,7 @@ SQL Questions and Answers
 * 5th_highest_salary.sql - window function
 * Arizona_California_Hawaii_Employees.sql - window function, row_number(), self join
 * Best_SellingItem.sql - extract, rank, window function, cte
+* Comments_Distribution.sql - Double Grouping
 * CustomerDetails.sql
 * Customer_Orders_Details.sql 
 * Easy_Medium.sql
@@ -15,8 +16,10 @@ SQL Questions and Answers
 * Marketing_Campaign_Success.sql - using dense_rank()
 * Most_Expensive_Products_Per_Category.sql - window function, cast as float
 * Monthly_Percentage_Difference.sql - using lag and windows alias
+* Most_Number_Oscar_Winnings.sql - 
 * Number_of_violations.sql - using Extract year from date
 * OrderDetails.sql 
+* Popularity_Percentage.sql - UNION to self
 * Revenue_OverTime.sql - Window function, ROWS BETWEEN 2 PRECEEDING AND CURRENT ROW
 * Salaries_Differences.sql - max(case when), abs, filter
 * Second_Highest_Salary.sql - cte, dense_rank()
