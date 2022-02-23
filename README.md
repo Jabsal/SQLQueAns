@@ -4,6 +4,7 @@ SQL Questions and Answers
 * Arizona_California_Hawaii_Employees.sql - window function, row_number(), self join
 * Best_SellingItem.sql - extract, rank, window function, cte
 * Comments_Distribution.sql - Double Grouping
+* Consecutive_Days.sql - Use Lead to get next dates and subtract
 * CustomerDetails.sql
 * Customer_Orders_Details.sql 
 * Easy_Medium.sql
