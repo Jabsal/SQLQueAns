@@ -2,7 +2,9 @@
 SQL Questions and Answers
 * 5th_highest_salary.sql - window function
 * Arizona_California_Hawaii_Employees.sql - window function, row_number(), self join
+* Average_Friends_PerUser.sql - 
 * Best_SellingItem.sql - extract, rank, window function, cte
+* Common_Letters.sql - unnest, regexp_split_to_array
 * Comments_Distribution.sql - Double Grouping
 * Consecutive_Days.sql - Use Lead to get next dates and subtract
 * CustomerDetails.sql

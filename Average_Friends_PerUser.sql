@@ -1,0 +1,2 @@
+-- https://platform.stratascratch.com/coding/9822-find-the-average-number-of-friends-a-user-has?python=
+-- Find the average number of friends a user has
